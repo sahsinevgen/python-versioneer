@@ -1,0 +1,42 @@
+{
+  "sources": {
+    "check": {
+      "deps": [
+        "build",
+        "flake8",
+        "flake8-docstrings",
+        "packaging>=20",
+        "pip>=20",
+        "setuptools>=50",
+        "tomli; python_version < \"3.11\"",
+        "types-setuptools",
+        "virtualenv>=20",
+        "wheel>=0.35"
+      ],
+      "srcargs": [
+        "tox.ini",
+        "testenv"
+      ],
+      "srctype": "tox"
+    },
+    "metadata": {
+      "deps": [
+        "tomli; python_version < \"3.11\" and extra == \"toml\""
+      ],
+      "srctype": "metadata"
+    },
+    "pep517": {
+      "deps": [
+        "wheel"
+      ],
+      "srctype": "pep517"
+    },
+    "pep518": {
+      "deps": [
+        "setuptools",
+        "tomli; python_version < \"3.11\""
+      ],
+      "srctype": "pep518"
+    }
+  }
+}
